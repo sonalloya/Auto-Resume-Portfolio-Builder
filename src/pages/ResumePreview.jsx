@@ -319,7 +319,7 @@ export default function ResumePreview({ data, onEdit, onHome, onGoToPortfolio, i
     setAiLoading(true);
     setToast({ type: "loading", message: "Sending data to AI server…" });
 
-    fetch("/api/generate-resume", {
+    fetch("https://auto-resume-portfolio-builder.onrender.com/api/generate-resume", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
